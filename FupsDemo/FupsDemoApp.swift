@@ -6,7 +6,7 @@ import SwiftUI
 struct FupsDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }
