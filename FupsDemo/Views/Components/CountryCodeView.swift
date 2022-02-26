@@ -17,7 +17,7 @@ struct CountryCodeView: View {
 				
 				Picker("CountryCode", selection: $loginVM.countryCode) {
 					ForEach(loginVM.countryCodes, id:\.code){ (_, code) in
-						Text("+\(code)")
+						Text("+ \(code)")
 							.tag(code)
 							.foregroundColor(.black)
 							.font(.custom("Helvetica-Bold", size: 16))
