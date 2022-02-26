@@ -17,6 +17,7 @@
 		F708222327C769EA009907A1 /* CountryCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708222227C769EA009907A1 /* CountryCodeView.swift */; };
 		F708222527C7841E009907A1 /* ScrollingBannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F708222427C7841E009907A1 /* ScrollingBannersView.swift */; };
 		F7DCF11227C8B2E40076E774 /* FupsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF11127C8B2E40076E774 /* FupsService.swift */; };
+		F7DCF16E27CA77EC0076E774 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DCF16D27CA77EC0076E774 /* CustomTextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F708222227C769EA009907A1 /* CountryCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeView.swift; sourceTree = "<group>"; };
 		F708222427C7841E009907A1 /* ScrollingBannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingBannersView.swift; sourceTree = "<group>"; };
 		F7DCF11127C8B2E40076E774 /* FupsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FupsService.swift; sourceTree = "<group>"; };
+		F7DCF16D27CA77EC0076E774 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				F708222227C769EA009907A1 /* CountryCodeView.swift */,
+				F7DCF16D27CA77EC0076E774 /* CustomTextFieldStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				F708221C27C750BF009907A1 /* LoginView.swift in Sources */,
 				F7DCF11227C8B2E40076E774 /* FupsService.swift in Sources */,
 				F708222327C769EA009907A1 /* CountryCodeView.swift in Sources */,
+				F7DCF16E27CA77EC0076E774 /* CustomTextFieldStyle.swift in Sources */,
 				F708220827C75005009907A1 /* ContentView.swift in Sources */,
 				F708222027C75D20009907A1 /* CountryCode.swift in Sources */,
 				F708220627C75005009907A1 /* FupsDemoApp.swift in Sources */,

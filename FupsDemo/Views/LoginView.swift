@@ -7,7 +7,6 @@ struct LoginView: View {
 	
 	@StateObject var loginVM = LoginViewModel()
 	
-	
     var body: some View {
 		NavigationView {
 			ZStack {
@@ -27,17 +26,19 @@ struct LoginView: View {
 						CountryCodeView(loginVM: loginVM)
 							.padding([.vertical, .leading], 20)
 						
+
+						let isEditingValue =
+							loginVM.gsmNumber.count > 0 && $loginVM.gsmNUmberHasReachedLimit.wrappedValue
+						
 						TextField("GSM Numaran", text: $loginVM.gsmNumber)
 							.keyboardType(.phonePad)
-							.padding(.leading, 10)
-							.font(.custom("Helvetica", size: 16))
-							.foregroundColor($loginVM.gsmNUmberHasReachedLimit.wrappedValue ? .white : .black)
-							.frame(minHeight: 56)
-							.background($loginVM.gsmNUmberHasReachedLimit.wrappedValue ? Color("errorBg").opacity(0.7) : Color.white)
+							.textFieldStyle(CustomTextFieldStyle())
+
+							.foregroundColor(isEditingValue ? .white : .black)
+							.background(isEditingValue ? Color("errorBg").opacity(0.7) : Color.white)
 							.overlay(
 							  RoundedRectangle(cornerRadius: 10)
-								  .stroke(Color.red, lineWidth: $loginVM.gsmNUmberHasReachedLimit.wrappedValue ? 1 : 0))
-							.cornerRadius(10)
+								  .stroke(Color.red, lineWidth: isEditingValue ? 1 : 0))
 							.padding()
 							.onChange(of: loginVM.gsmNumber, perform: {
 								//phone number is supposed to be 10 char long
@@ -53,12 +54,8 @@ struct LoginView: View {
 					}
 					
 					SecureField("Şifren", text: $loginVM.password)
-						.padding(.leading, 10)
-						
-						.font(.custom("Helvetica", size: 16))
-						.frame(maxWidth: .infinity, minHeight: 56)
+						.textFieldStyle(CustomTextFieldStyle())
 						.background(Color.white)
-						.cornerRadius(10)
 						.padding(.horizontal, 20)
 											
 					
